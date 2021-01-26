@@ -272,12 +272,19 @@ function consistentLineLength(filename, length) {
         realstr = realstr.slice(temp + 1); // removing from the original string
         
     }
-    returnThis.push(realstr.trim()); // push the remaining elements into retrunList
-    return returnThis; // retrun returnList
+    if (realstr.length > 0){
+      returnThis.push(realstr.trim());
+      return returnThis;
+    }
+    else{ 
+      return returnThis; 
+    }
 }
 
-// Exercise 9
+// console.log(consistentLineLength("text1.txt",15));
 
+
+// Exercise 9
 let knight_moves = (start_pos) => {
     // Helper function for Exercise 9 finding all of the potenital  moves at one time 
     let legit_moves=[];

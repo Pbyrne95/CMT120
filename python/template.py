@@ -61,7 +61,7 @@ def pigLatin(word):
     capCheck = word[0]
     iter_word = word.lower()
     
-    vowels,specialChars = ['a','e','i','o','u'],['!','#','.','*'] #Defining a list contain vowels and special charecters to be checked at the end of the algo
+    vowels,specialChars = ['a','e','i','o','u'],['!','#','.','*','?'] #Defining a list contain vowels and special charecters to be checked at the end of the algo
 
     # Defining a list and a variable alongside boolean values which alter their state after the for loop
     vowel_checker = []
@@ -135,7 +135,7 @@ def int2Text(num):
                 6: 'six', 7: 'seven', 8: 'eight', 9: 'nine', 10: 'ten'}
     teens =    {10: 'ten', 11: 'eleven', 12: 'twelve', 13: 'thirteen', 14: 'fourteen',
                 15: 'fifteen', 16: 'sixteen', 17: 'seventeen', 18: 'eighteen', 19: 'nineteen'}
-    num2words2 = {0:"",1:'ten', 2:'twenty', 3:'thirty', 4:'fourty', 5:'fifty', 6:'sixty', 7:'seventy', 8:'eighty', 9:'ninety'}
+    num2words2 = {0:"",1:'ten', 2:'twenty', 3:'thirty', 4:'forty', 5:'fifty', 6:'sixty', 7:'seventy', 8:'eighty', 9:'ninety'}
 
     #changing the input into a string in order to split the string 
     check = str(num)
