@@ -74,7 +74,7 @@ function pigLatin(word) {
 
     //Defining a list contain vowels and special charecters to be checked at the end of the algo
     const vowels = ['a','e','i','o','u'];
-    const specialChars = ['!','#','.','*'];
+    const specialChars = ['!','#','.','*','?'];
 
     let vowel_checker = [] 
     let return_word = ''
@@ -172,7 +172,7 @@ function int2Text(num) {
                 6: 'six', 7: 'seven', 8: 'eight', 9: 'nine', 10: 'ten'}
     const teens =    {10: 'ten', 11: 'eleven', 12: 'twelve', 13: 'thirteen', 14: 'fourteen',
                 15: 'fifteen', 16: 'sixteen', 17: 'seventeen', 18: 'eighteen', 19: 'nineteen'}
-    const num2words2 = {0:"",1:'ten', 2:'twenty', 3:'thirty', 4:'fourty', 5:'fifty', 6:'sixty', 7:'seventy', 8:'eighty', 9:'ninety'}
+    const num2words2 = {0:"",1:'ten', 2:'twenty', 3:'thirty', 4:'forty', 5:'fifty', 6:'sixty', 7:'seventy', 8:'eighty', 9:'ninety'}
 
     let check = num.toString();
     let return_string = ' '
@@ -370,7 +370,7 @@ function knight(p1, p2, num_moves) {
         }
         
         // if num_moves less than target num moves add new moves_level to stack
-        if(current_no_moves < num_moves && moves_stack[moves_stack.length-1][0].length === undefined ){
+        if(current_no_moves < num_moves && moves_stack[moves_stack.length-1][0] === undefined ){
             return false;
         }
         
