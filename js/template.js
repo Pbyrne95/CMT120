@@ -1,24 +1,29 @@
 // Exercise 1
 function reduceFraction(num, den) {
-    let div = 2; // Starting the divisor at two to make the iteraiton quciker
-    if(num*2 === den){ // checking if the fraction is a half before the iterartion starts 
-        return [1,2];
-    }
-    // iterating through the number to check for lowest common divisor 
-    else { 
-        while(div < Math.min(num,den)){
+    let div = 2; 
+
+    while(div < Math.max(num,den)){
         if(num % div === 0 && den % div === 0){ // checking for common multiples 
             num = num/div; // reasinging num,div as each new div is found 
             den = den/div;
+            div++;
             
         }
         else {
             div++; // if a common number is not found increment div
         }
     }
+    
+    // return num and den as an array
+    if(num % 2 === 0 && den % 2 === 0){
+        num = num/2
+        den = den/2
+        return [num,den];
+      }
+    else{
+      return[num,den]
     }
-    // return num and den as an array 
-    return [num,den];
+
 }
 
 
